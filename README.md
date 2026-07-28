@@ -26,5 +26,5 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . g++ (nome do arquivo) -o (nome do arquivo).exe // para começar o comando no terminal
 
-. \.programa.exe // para começar a executar
+. ./programa.exe // para começar a executar
 
