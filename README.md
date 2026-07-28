@@ -28,3 +28,5 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . ./programa.exe // para começar a executar
 
+27/07/2026
+
