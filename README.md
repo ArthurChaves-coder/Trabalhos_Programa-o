@@ -1,5 +1,7 @@
 ANOTAÇÕES DE AULA DE ALGORITMOS B
 
+27/07/2026
+
 . Git do professor: alexandrezambelan;
 
 . O conteúdo básico da matéria: structs, modulação e ponteiros;
@@ -28,5 +30,9 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . ./programa.exe // para começar a executar
 
-27/07/2026
+==============================================================================================================================================================================================================================
+
+3/08/2026
+
+
 
