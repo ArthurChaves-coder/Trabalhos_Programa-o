@@ -1,150 +1,101 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<iostream>
+#include<ctime>
+#include<cstdlib>
+using namespace std;
 
-#define TAMANHO 10
+int main(){
+    int opcao, i, j;
+    int vetor[10];
+    int maior, menor;
+    int soma = 0;
+    float media;
+    int temp;
+    float mediana;
 
-int main() {
-    int opcao;
-    int vetor[TAMANHO];
-    int qtd_elementos = 0;
-    srand(time(NULL));
-
-    do {
+    do{
         system("cls");
-        printf("========================================\n");
-        printf("            MENU PRINCIPAL              \n");
-        printf("========================================\n");
-        printf("1 - Popular vetor com numeros aleatorios\n");
-        printf("2 - Listar vetor populado\n");
-        printf("3 - Ordenar vetor\n");
-        printf("4 - Calcular media aritmetica\n");
-        printf("5 - Calcular mediana\n");
-        printf("6 - Exibir menor e maior valor\n");
-        printf("7 - Sair do sistema\n");
-        printf("========================================\n");
-        printf("Opcao: ");
-        scanf("%d", &opcao);
+        cout << "-----------------------------------\n";
+        cout << "MENU DE OPCOES\n";
+        cout << "-----------------------------------\n";
+        cout << "1 - Colocar valores aleatorios para um vetor\n";
+        cout << "2 - Mostrar valores do vetor sorteados\n";
+        cout << "3 - Exibir maior e menor valor\n";
+        cout << "4 - Calcular a media dos valores do vetor\n";
+        cout << "5 - Ordenar o vetor em ordem crescente\n";
+        cout << "6 - Calcular a mediana dos valores do vetor(so funciona com a ordenacao feita primeiramente!!!)\n";
+        cout << "7 - Sair\n";
 
-        switch (opcao) {
-            case 1:
-                printf("\nPopulando o vetor com numeros aleatorios...\n");
-                for (int i = 0; i < TAMANHO; i++) {
+        cout << "Escolha uma opcao: \n";
+        cin >> opcao;
+
+        switch(opcao){
+
+            case 1: //facil
+                srand(time(NULL));
+                for(i = 0; i < 10; i++){
                     vetor[i] = rand() % 100;
                 }
-                qtd_elementos = TAMANHO;
-                printf("Vetor populado com sucesso!\n");
+                cout << "valores sorteados com sucesso!\n";
                 break;
 
-            case 2:
-                printf("\nListando o vetor:\n");
-                if (qtd_elementos > 0) {
-                    for (int i = 0; i < TAMANHO; i++) {
-                        printf("%d\t", vetor[i]);
-                    }
-                    printf("\n");
-                } else {
-                    printf("Vetor vazio. Nada a exibir.\n");
+            case 2: //facil
+                cout << "Valores do vetor sorteados: \n";
+                for(i = 0; i < 10; i++){
+                    cout << vetor[i] << " ";
                 }
+                cout << "\n";
                 break;
 
-            case 3:
-                printf("\nOrdenando o vetor (Metodo Bolha)...\n");
-                if (qtd_elementos > 0) {
-                    
-                    for (int i = 0; i < TAMANHO - 1; i++) {
-                        for (int j = 0; j < TAMANHO - i - 1; j++) {
-                            if (vetor[j] > vetor[j + 1]) {
-                                int aux = vetor[j];
-                                vetor[j] = vetor[j + 1];
-                                vetor[j + 1] = aux;
-                            }
+            case 3: //facil
+                maior = vetor[0];
+                menor = vetor[0];
+
+                for(i = 0; i < 10; i++){
+                    if(vetor[i] > maior){
+                        maior = vetor[i];
+                    }
+                    if(vetor[i] < menor){
+                        menor = vetor[i];
+                    }
+                }
+                cout << "Maior valor: " << maior << "\n";
+                cout << "Menor valor: " << menor << "\n";
+                break;
+
+            case 4: //facil
+                for(i = 0; i < 10; i++){
+                    soma = soma + vetor[i];
+                }
+                media = soma / 10.0;
+                cout << "Media dos valores do vetor: " << media << "\n";
+                break;
+
+            case 5: //dificil
+                cout << "Ordenacao do vetor de forma crescente: \n";
+                for(i = 0; i < 10; i++){
+                    for(j = 0; j < 10 - i - 1; j++){
+                        if(vetor[j] > vetor[j+1]){
+                            temp = vetor[j];
+                            vetor[j] = vetor[j+1];
+                            vetor[j+1] = temp;
                         }
                     }
-                    printf("Vetor ordenado com sucesso!\n");
-                } else {
-                    printf("Vetor vazio. Nada para ordenar.\n");
                 }
+                cout << "Vetor ordenado com sucesso!\n";
                 break;
 
-            case 4: 
-                printf("\nCalculando a media aritmetica...\n");
-                if (qtd_elementos > 0) {
-                    float soma = 0;
-                    for (int i = 0; i < TAMANHO; i++) {
-                        soma += vetor[i];
-                    }
-                    float media = soma / TAMANHO;
-                    printf("A media aritmetica e: %.2f\n", media);
-                } else {
-                    printf("Vetor vazio. Impossivel calcular a media.\n");
-                }
-                break;
-
-            case 5: 
-                printf("\nCalculando a mediana\n");
-                if (qtd_elementos > 0) {
-                    
-                    int temp[TAMANHO];
-                    for (int i = 0; i < TAMANHO; i++) {
-                        temp[i] = vetor[i];
-                    }
-
-                    
-                    for (int i = 0; i < TAMANHO - 1; i++) {
-                        for (int j = 0; j < TAMANHO - i - 1; j++) {
-                            if (temp[j] > temp[j + 1]) {
-                                int aux = temp[j];
-                                temp[j] = temp[j + 1];
-                                temp[j + 1] = aux;
-                            }
-                        }
-                    }
-
-                    float mediana;
-                    
-                    if (TAMANHO % 2 != 0) {
-                        mediana = temp[TAMANHO / 2];
-                    } else {
-                        mediana = (float)(temp[(TAMANHO / 2) - 1] + temp[TAMANHO / 2]) / 2.0;
-                    }
-                    printf("A mediana e: %.2f\n", mediana);
-                } else {
-                    printf("Vetor vazio. Impossivel calcular a mediana\n");
-                }
-                break;
-
-            case 6:
-                printf("\nLocalizando menor e maior valor\n");
-                if (qtd_elementos > 0) {
-                    int menor = vetor[0];
-                    int maior = vetor[0];
-
-                    for (int i = 1; i < TAMANHO; i++) {
-                        if (vetor[i] < menor) {
-                            menor = vetor[i];
-                        }
-                        if (vetor[i] > maior) {
-                            maior = vetor[i];
-                        }
-                    }
-                    printf("Menor valor encontrado: %d\n", menor);
-                    printf("Maior valor encontrado: %d\n", maior);
-                } else {
-                    printf("Vetor vazio. Nenhum valor para analisar.\n");
-                }
+            case 6: //facil, nesse caso, como sao numeros pares, deve somar os dois e dividir por 2, caso fosse impar, seria apenas o valor do meio
+                cout << "Mediana dos valores do vetor: \n";
+                mediana = (vetor[4] + vetor[5]) / 2.0;
+                cout << "Mediana: " << mediana << "\n";
                 break;
 
             case 7:
-                printf("\nSistema encerrado com sucesso\n");
-                break;
-
-            default:
-                printf("\nOpcao invalida. Redigite.\n");
+                cout << "Saindo do programa\n";
                 break;
         }
         system("pause");
-    } while (opcao != 7);
+    }while(opcao != 7);
 
     return 0;
 }
