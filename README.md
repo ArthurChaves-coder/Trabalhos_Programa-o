@@ -28,7 +28,7 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . g++ (nome do arquivo) -o (nome do arquivo).exe // para começar o comando no terminal
 
-. ./programa.exe // para começar a executar
+. .\programa.exe // para começar a executar
 
 ==============================================================================================================================================================================================================================
 
@@ -37,6 +37,12 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 . #include<cstdlib> // biblioteca que serve para poder gerar numeros aleatorios quando preciso
 
 . #include<ctime> // pega o tempo do computador para nao gerar sempre os mesmos numeros aleatorios
+
+. Bom para montar um menu: usar um do-while com switch dentro para as opções
+
+. vetor[i] = rand() % 100 // gera numeros aleatorios ate 100 ( 0 a 99 )
+
+
 
 
 
