@@ -34,5 +34,11 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 3/08/2026
 
+. #include<cstdlib> // biblioteca que serve para poder gerar numeros aleatorios quando preciso
+
+. #include<ctime> // pega o tempo do computador para nao gerar sempre os mesmos numeros aleatorios
+
+
+
 
 
