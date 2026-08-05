@@ -1,6 +1,6 @@
 ANOTAÇÕES DE AULA DE ALGORITMOS B
 
-##27/07/2026
+## 27/07/2026
 
 . Git do professor: alexandrezambelan;
 
@@ -32,7 +32,7 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 ==============================================================================================================================================================================================================================
 
-##3/08/2026
+## 3/08/2026
 
 . #include<cstdlib> // biblioteca que serve para poder gerar numeros aleatorios quando preciso
 
