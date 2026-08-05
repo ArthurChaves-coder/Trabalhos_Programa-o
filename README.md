@@ -30,8 +30,6 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . .\programa.exe // para começar a executar
 
-==============================================================================================================================================================================================================================
-
 ## 3/08/2026
 
 . #include<cstdlib> // biblioteca que serve para poder gerar numeros aleatorios quando preciso
