@@ -40,7 +40,7 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . vetor[i] = rand() % 100 // gera numeros aleatorios ate 100 ( 0 a 99 )
 
-organiza essas anotações para eu colocar no git hub, deixe melhor para vizualizar
+
 
 
 
