@@ -9,7 +9,7 @@ typedef struct {
     string placa;
     string cor;
     string horaEntrada;
-    string horaSaida
+    string horaSaida;
 } Veiculo;
 
 int main() {
