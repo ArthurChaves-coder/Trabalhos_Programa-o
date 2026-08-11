@@ -48,7 +48,7 @@ int main() {
 
 
             case 3: 
-                cout << "digite a placa do carro que est saindo: ";
+                cout << "digite a placa do carro que esta saindo: ";
                 getline(cin, placa);
 
                 if (garagem.size() > 0)
