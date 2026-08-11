@@ -9,6 +9,7 @@ typedef struct {
     string placa;
     string cor;
     string horaEntrada;
+    string horaSaida
 } Veiculo;
 
 int main() {
@@ -20,6 +21,7 @@ int main() {
         cout << "Menu de opcoes:\n";
         cout << "1 - Adicionar veiculo\n";
         cout << "2 - Listar veiculos\n";
+        cout << "3 - Saida do carro\n"
         cout << "0 - Sair\n";
         cout << "Escolha uma opcao: ";
         cin >> opcao;
@@ -43,6 +45,33 @@ int main() {
                     cout << "Placa: " << garagem[i].placa << ", Cor: " << garagem[i].cor << ", Hora de Entrada: " << garagem[i].horaEntrada;
                 }
                 break;
+
+
+            case 3: 
+                cout << "digite a placa do carro que est saindo: ";
+                getline(cin, placa);
+
+                if (garagem.size() > 0)
+                {
+                    bool comp = false;
+                    for (int i = 0; i < garagem.size(); i++)
+                    {
+                        if (garagem[i].placa == placa)
+                        {
+                            comp = true;
+                            break;
+                        }
+                    }
+                }
+
+                if(comp){
+                    cout << "digite o horario da saida: ";
+                    getline(cin,horaSaida);
+                    
+                }
+
+
+            
             case 0:
                 cout << "Saindo do programa.\n";
                 break;
