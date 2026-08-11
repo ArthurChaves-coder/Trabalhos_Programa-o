@@ -40,7 +40,11 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . vetor[i] = rand() % 100 // gera numeros aleatorios ate 100 ( 0 a 99 )
 
+## 11/08/2026
 
+. push.back serve para que um vetor não precise ter declarado o seu tamanho, é um vetor dinamico
+
+. vetor.size: quando usamos um vetor dinâmico, nao sabemos ate onde ele vai, por isso usamos size dentro do laço for na parte do meio
 
 
 
