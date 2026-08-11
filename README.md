@@ -46,6 +46,22 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . vetor.size: quando usamos um vetor dinâmico, nao sabemos ate onde ele vai, por isso usamos size dentro do laço for na parte do meio
 
+. #include<string> para guardar textos
+
+. #include<vector> usado para fazer uma lista dinâmica que cresce conforme adicionamos itens
+
+. typedef struct {
+    string placa;
+    string cor;
+    string horaEntrada;
+    string horaSaida;
+} Veiculo; --> isso foi usado para toda vez que eu quiser cadastrar um carro em uma garagem, as informações dele estejam guardadas nesse local;
+vector<Veiculo> garagem --> cria uma lista dinâmica  
+
+. garagem.push_back({placa, cor, horaEntrada, ""});, dps de digitar os dados, o push back joga essas informações para o vetor garagem, que ficam la guardadas.
+
+.vector<Veiculo>garagem so aceita informações que foram configuradas no struct;
+
 
 
 
