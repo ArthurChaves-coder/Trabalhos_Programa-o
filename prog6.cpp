@@ -53,12 +53,12 @@ int main() {
 
                 if (garagem.size() > 0)
                 {
-                    bool comp = false;
+                    bool comp = false; // ele entra como false, no caso, 0
                     for (int i = 0; i < garagem.size(); i++)
                     {
                         if (garagem[i].placa == placa)
                         {
-                            comp = true;
+                            comp = true; // agora nao é mais falso, se tornou verdadeiro, logo, o carro foi identificado
                             break;
                         }
                     }
