@@ -46,9 +46,9 @@ ANOTAÇÕES DE AULA DE ALGORITMOS B
 
 . vetor.size: quando usamos um vetor dinâmico, nao sabemos ate onde ele vai, por isso usamos size dentro do laço for na parte do meio
 
-. #include<string> para guardar textos
+. // #include<string> para guardar textos
 
-. #include<vector> usado para fazer uma lista dinâmica que cresce conforme adicionamos itens
+. // #include<vector> usado para fazer uma lista dinâmica que cresce conforme adicionamos itens
 
 . typedef struct {
     string placa;
