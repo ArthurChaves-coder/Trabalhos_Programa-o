@@ -19,6 +19,7 @@ int main(){
     int i;
     string produtobuscado;
     float valortotal = 0;
+    bool encontrado = false;
 
     do {
         cout << "\nMENU\n";
@@ -40,8 +41,8 @@ int main(){
             listaprodutos.push_back({nome, valor, quantidade});
             break;
 
-            case 2: {
-            bool encontrado = false;
+            case 2: 
+            encontrado = false;
             cout << "digite o produto que voce quer saber o valor em estoque: ";
             getline(cin,produtobuscado);
             for(i=0; i < listaprodutos.size(); i ++){
@@ -55,8 +56,7 @@ int main(){
                 cout << "o total em estoque de " << produtobuscado << " e " << valortotal;
             }
             break;
-            }
-
+        
             case 3:
             cout << "saindo do programa...";
             break;
